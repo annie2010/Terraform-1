@@ -24,8 +24,6 @@ outputs, and resources.)*
 
 * The name of the variable above would be `student_alias`
 
----
-
 &nbsp;
 
 &nbsp;
@@ -58,8 +56,6 @@ The possible properties of a variable:
 
 * We've only set the description, so there's no default value, and it will use the default type of: `string`.
 
----
-
 &nbsp;
 
 &nbsp;
@@ -88,8 +84,6 @@ that handle input and allow for reference throughout the working directory
 * while variable stanzas can be used this way by simply setting the `default` to the desired value, this 
 negates the benefits of Terraform's native re-usability
 * instead, try using one of the below methods...
-
----
 
 &nbsp;
 
@@ -152,8 +146,6 @@ provider "aws" {
 
 * init must downloads the necessary providers to the `.terraform` directory locally so that further plans and applies can use it
 
----
-
 &nbsp;
 
 &nbsp;
@@ -201,8 +193,6 @@ utilizes your chosen identifying text
 rm terraform.tfvars
 ```
 
----
-
 &nbsp;
 
 &nbsp;
@@ -238,8 +228,6 @@ terraform plan -var 'student_alias=[your alias]'
 * try using a different identifier to see if it worked
   * just as before, you should be able to see the  new identifier in the plan output
 
----
-
 &nbsp;
 
 &nbsp;
@@ -274,8 +262,6 @@ TF_VAR_student_alias=[your alias] terraform plan
 
 * (This can be a useful method for handling secrets, or other automated use cases)
 
----
-
 &nbsp;
 
 &nbsp;
@@ -306,8 +292,6 @@ terraform plan
 
 * ...the above should prompt you for your `student_alias` value
   * this is the final way in which a variable can be set, i.e., at runtime
-
----
 
 &nbsp;
 
