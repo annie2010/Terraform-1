@@ -54,7 +54,7 @@ The possible properties of a variable:
 2. `description`: a useful descriptor for the variable
 3. `type`: we'll discuss types in depth later
 
-* We've only set the description, so there's no default value, and it will use the default type of: `string`.
+* We've only set the description, so there's no default value, and it will use the default type of: `string`
 
 &nbsp;
 
@@ -330,6 +330,6 @@ locals {
 }
 ```
 
-* We'll stop here for now
-  * We'll begin actually working with applying these plans in our next exercise.
+* we'll stop here for now
+  * we'll begin actually working with applying these plans in our next exercise
 
