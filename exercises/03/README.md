@@ -1,7 +1,7 @@
 # Exercise #3: Plans and Applies
 
 * now we are actually going to create some infrastructure
-  * for this exercise, we are going to:
+* for this exercise, we are going to:
 
 1. initialize our project directory (i.e., this exercise directory)
 1. run a `terraform plan` to understand why planning makes sense, and should always be a part of your terraform flow
@@ -30,7 +30,7 @@
 
 ### Initialization
 
-* First, we need to run init since we're starting in a new exercise, or project directory:
+* first, we need to run init since we're starting in a new exercise, or project directory:
 
 ```bash
 terraform init
