@@ -1,17 +1,15 @@
 # Exercise #2: Using Variables
 
-For this exercise, we will revisit the terraform project from the previous exercise. There are a few ways 
-to accomplish our goal in this exercise, so try doing each one independently. If you get stuck or have
-questions, let your instructor know.
+* For this exercise, we will revisit the terraform project from the previous exercise
 
-There are many schools of thought on how to use variables to configure reusable terraform, 
-but we'll be exploring the core mechanics so that you can get a grasp of how to use them in various ways.
+* There are a few ways to accomplish our goal in this exercise, so try doing each one independently
+  * If you get stuck or have questions, let your instructor know
 
 ### Looking at the variable stanza
 
-In order to leverage the mechanics around the variable concept in terraform, you must declare each variable.
+* In order to leverage the variable concept in terraform, you must *declare* each variable.
 
-We have a single variable defined in our `variables.tf` file as:
+* We have a single variable defined in our `variables.tf` file like so:
 
 ```hcl
 # Declare a variable so we can use it.
@@ -20,11 +18,13 @@ variable "student_alias" {
 }
 ```
 
-*Note: We don't have to have a variables.tf file–we could just as well put all variables, resources, 
-outputs, etc. into one file, but it's considered best practice to maintain different files for variables,
-outputs, and resources.*
+<div style="page-break-after: always;"></div>
 
-The name of the variable above would be `student_alias`.
+*(Note: We don't have to have a variables.tf file–we could just as well put all variables, resources, 
+outputs, etc. into one file, but it's considered best practice to maintain different files for variables,
+outputs, and resources.)*
+
+* The name of the variable above would be `student_alias`
 
 The possible properties of a variable:
 
@@ -36,7 +36,9 @@ The possible properties of a variable:
 2. `description`: a useful descriptor for the variable
 3. `type`: we'll discuss types in depth later
 
-We've only set the description, so there's no default value, and it will use the default type of: `string`.
+* We've only set the description, so there's no default value, and it will use the default type of: `string`.
+
+<div style="page-break-after: always;"></div>
 
 ### Adding the values statically in the variables stanza.
 
@@ -46,6 +48,7 @@ that handle input and allow for reference throughout the working directory.  Tho
 variable stanzas can be used this way by simply setting the "default" to the desired value, this 
 negates the benefits of Terraform's native re-usability.  Instead, try using one of the below methods.
 
+<div style="page-break-after: always;"></div>
 
 ### Initialization
 
