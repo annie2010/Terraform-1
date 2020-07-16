@@ -1,12 +1,14 @@
 # Exercise #6: Modules
 
-Terraform is *ALL* about modules.  Every terraform working directory is really just a module that could be reused by others
-This is one of the key capabilities of Terraform.
+* terraform is *ALL* about modules
+* every terraform working directory is really just a module that could be reused by others
+* this is one of the key capabilities of terraform
 
-In this exercise, we are going to modularize the code that we have been playing with during this whole workshop, but instead of
-constantly redeclaring everything, we are just going to reference the module that we've created and see if it works.
+* in this exercise, we are going to modularize the code that we have been playing with during this whole workshop, but instead of
+constantly redeclaring everything, we're going to reference the module that we've created and see if it works
 
-First, create a main.tf file in the main directory for the 6th exercise.  Inside the `main.tf` file you created, please add the following:
+* first, create a main.tf file in the main directory for the this exercise
+   * inside the `main.tf` file you created, add the following:
 
 ```hcl
 provider "aws" {
@@ -27,7 +29,7 @@ module "s3_bucket_02" {
 }
 ```
 
-Next, create a `variables.tf` file so we can capture `student_alias` to pass it through to our module:
+* next, create a `variables.tf` file so we can capture `student_alias` to pass it through to our module:
 
 ```hcl
 variable "student_alias" {
@@ -35,11 +37,11 @@ variable "student_alias" {
 }
 ```
 
-What we've done here is create a `main.tf` config file that references a module stored in a
-local directory, twice.  This allows us to encapsulate any complexity contained by the module's code
-while still allowing us to pass variables into the module.
-
-After doing this, you can then begin the init and apply process.
+* what we've done is create a `main.tf` config file that references a module stored in a
+local directory, twice
+  * this allows us to encapsulate any complexity contained by the module's codewhile still allowing us to pass variables into the module
+ 
+* after doing this, you can then begin the init and apply process:
 
 ```bash
 terraform init
@@ -47,17 +49,17 @@ terraform plan
 terraform apply
 ```
 
-You'll notice that terraform manages each resource as if there is no module division, meaning the resources are bucketed
-into one big change list, but under the covers Terraform's dependency graph will show some separation.  It's very difficult,
-for example, to create dependencies between two resources that are in different modules.  You can, however, use
-interpolation to create a variable dependency between two modules at the root level, ensuring one is created before the other.
+* you'll notice that terraform manages each resource as if there is no module division
+  * i.e., the resources are bucketed into one big change list
+* ...but under the hood terraform's dependency graph will show some separation
+* it's very difficult, for example, to create dependencies between two resources that are in different modules
+* you can, however, use interpolation to create a variable dependency between two modules at the root level, ensuring one is created before the other
 
-Specific applications where direct resource dependency is required really necessitate the grouping of those resources
-into a single module or project.
+* specific applications where direct resource dependency is required really necessitates grouping those resources into a single module or project
 
 ### Finishing this exercise
 
-Let's run the following to finish:
+* as usual...
 
 ```
 terraform destroy
