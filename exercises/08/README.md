@@ -1,7 +1,7 @@
 # Exercise #8: Understanding & Manipulating Data/Variables
 
 This is one part of the course where we'll look at some very brand new stuff. Prior to terraform version 0.12,
-which was released in May of this year, the only variable types available were:
+which was released May 2019, the only variable types available were:
 
 * String
 * List
