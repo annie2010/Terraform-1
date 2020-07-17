@@ -1,6 +1,6 @@
 variable "my_list" {
   type      = list(string)
-  default   = ["1", "2", "3"]
+  default   = ["foo", "bar", "baz"]
 }
 
 variable "my_set" {
@@ -10,7 +10,7 @@ variable "my_set" {
 
 variable "my_tuple" {
   type      = tuple([string, number, string])
-  default   = ["1", 2, "3"]
+  default   = ["this", 2, "that"]
 }
 
 variable "my_map" {
