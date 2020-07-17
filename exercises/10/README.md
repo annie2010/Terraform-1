@@ -1,6 +1,6 @@
 # Exercise #10: Backends and Remote State
 
-By Default, Terraform will store the state for you infrastructure in a local file, but there's a problem with this:
+By default, Terraform will store the state for you infrastructure in a local file, but there's a problem with this:
 
 What if you work on a team where different people will run terraform at different times from different places? This 
 would mean you'd need to share your state file in some way. Some people have done it as encrypted local files in source 
@@ -58,7 +58,7 @@ Terraform will perform the following actions:
       + arn                         = (known after apply)
       + bucket                      = (known after apply)
       + bucket_domain_name          = (known after apply)
-      + bucket_prefix               = "dws-di-bane-"
+      + bucket_prefix               = "devint-...-"
       + bucket_regional_domain_name = (known after apply)
       + force_destroy               = true
       + hosted_zone_id              = (known after apply)
@@ -83,13 +83,13 @@ Do you want to perform these actions?
   Enter a value: yes
 
 aws_s3_bucket.state_bucket: Creating...
-aws_s3_bucket.state_bucket: Creation complete after 5s [id=dws-di-bane-20190623022126911700000001]
+aws_s3_bucket.state_bucket: Creation complete after 5s [id=devint-...-20190623022126911700000001]
 
 Apply complete! Resources: 1 added, 0 changed, 0 destroyed.
 
 Outputs:
 
-state_bucket_name = dws-di-bane-20190623022126911700000001
+state_bucket_name = devint-...-20190623022126911700000001
 ```
 
 Now, before we move on, you may be asking yourself: so what about the state for this state bucket? And it's a good 
